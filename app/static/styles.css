@@ -123,6 +123,8 @@ button.danger:hover:not(:disabled) { background: var(--danger-bg); }
 @media (max-width: 920px) { .columns { grid-template-columns: 1fr; } }
 
 .clause-list { list-style: none; margin: 0; padding: 0; }
+/* 合并提交期间：暂时锁定列表内的编辑 / 删除 / 重排 / 勾选，结束后自动恢复 */
+.clause-list.busy { pointer-events: none; opacity: 0.55; }
 
 .card {
   border: 1px solid var(--line);
