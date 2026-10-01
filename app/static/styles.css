@@ -110,6 +110,29 @@ button.danger:hover:not(:disabled) { background: var(--danger-bg); }
   font-size: 12.5px;
 }
 
+.preview-status {
+  border-radius: 999px;
+  padding: 2px 12px;
+  font-size: 12.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.preview-status.wait {
+  background: var(--chip);
+  color: var(--chip-ink);
+}
+.preview-status.error {
+  background: var(--danger-bg);
+  color: var(--danger);
+  border: 1px solid #f3c4c4;
+}
+.preview-status.error button {
+  padding: 1px 9px;
+  font-size: 12px;
+  border-radius: 999px;
+}
+
 .banner {
   background: var(--warn-bg);
   border-color: #f5d9a8;
@@ -149,6 +172,7 @@ button.danger:hover:not(:disabled) { background: var(--danger-bg); }
 }
 .grip { cursor: grab; color: #9aa1ad; font-size: 15px; line-height: 1; padding: 0 2px; }
 .grip:active { cursor: grabbing; }
+.grip.is-locked { cursor: not-allowed; opacity: 0.5; }
 .num {
   font-weight: 700;
   min-width: 26px;
